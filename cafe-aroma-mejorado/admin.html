@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de administración · Café Aroma</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="taza" viewBox="0 0 24 24"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="currentColor"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="11" width="8" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="15" width="8" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2.5.6 4 2.4 4 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0A2.7 2.7 0 0 0 20 9M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M10 4H5v16h5M15 8l4 4-4 4M19 12H9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<!-- ============ ACCESO ============ -->
+<section class="acceso" id="acceso" hidden>
+  <form class="acceso-caja" id="form-acceso" novalidate>
+    <span class="marca-ico"><svg><use href="#taza"/></svg></span>
+    <h1>Panel de administración</h1>
+    <p class="sub">Café Aroma · solo personal autorizado</p>
+    <label class="campo"><svg><use href="#i-mail"/></svg><input type="email" id="ac-email" placeholder="Correo" autocomplete="email"></label>
+    <label class="campo"><svg><use href="#i-lock"/></svg><input type="password" id="ac-pass" placeholder="Contraseña" autocomplete="current-password"></label>
+    <p class="error" id="ac-error"></p>
+    <button class="btn bloque" type="submit">Entrar</button>
+    <a class="volver" href="index.html">← Volver a la tienda</a>
+  </form>
+</section>
+
+<section class="acceso" id="sin-permiso" hidden>
+  <div class="acceso-caja">
+    <span class="marca-ico rojo"><svg><use href="#i-lock"/></svg></span>
+    <h1>Acceso denegado</h1>
+    <p class="sub">Tu cuenta no tiene rol de administrador.</p>
+    <a class="btn bloque" href="index.html">Ir a la tienda</a>
+    <button class="btn bloque sec" id="sp-salir">Cerrar sesión</button>
+  </div>
+</section>
+
+<div class="aviso-config" id="aviso-config" hidden>⚠️ Falta configurar Supabase. Abre <b>config.js</b> y pega tu Project URL y tu anon key.</div>
+
+<!-- ============ APLICACIÓN ============ -->
+<div class="app" id="app" hidden>
+  <div class="velo" id="velo"></div>
+  <aside class="lateral" id="lateral">
+    <div class="lat-marca"><span class="marca-ico"><svg><use href="#taza"/></svg></span><div><b>CAFÉ AROMA</b><small>ADMINISTRADOR</small></div></div>
+    <nav class="lat-nav" id="lat-nav">
+      <button class="on" data-sec="dashboard"><svg><use href="#i-dash"/></svg>Dashboard</button>
+      <button data-sec="productos"><svg><use href="#i-cup"/></svg>Productos</button>
+      <button data-sec="pedidos"><svg><use href="#i-bag"/></svg>Pedidos <span class="pill" id="pill-pend" hidden>0</span></button>
+      <button data-sec="usuarios"><svg><use href="#i-users"/></svg>Usuarios</button>
+    </nav>
+    <div class="lat-pie">
+      <a href="index.html"><svg><use href="#i-store"/></svg>Ver tienda</a>
+      <button id="btn-salir"><svg><use href="#i-logout"/></svg>Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <div class="principal">
+    <header class="arriba">
+      <button class="icono solo-movil" id="btn-lateral" aria-label="Menú"><svg><use href="#i-menu"/></svg></button>
+      <h2 id="titulo-sec">Dashboard</h2>
+      <div class="yo"><i id="yo-ini">A</i><span id="yo-nombre">Admin</span></div>
+    </header>
+
+    <main class="contenido">
+      <!-- DASHBOARD -->
+      <section class="sec" id="sec-dashboard">
+        <div class="dash-cabecera">
+          <div>
+            <span class="dash-eyebrow">CENTRO DE CONTROL</span>
+            <h1>Resumen del negocio</h1>
+            <p>Consulta el rendimiento de Café Aroma y el movimiento de tu tienda.</p>
+          </div>
+          <div class="dash-controles">
+            <label class="dash-periodo"><span>Periodo</span>
+              <select id="dash-periodo" class="sel">
+                <option value="7">Últimos 7 días</option>
+                <option value="30">Últimos 30 días</option>
+              </select>
+            </label>
+            <button class="btn sec" id="dash-actualizar" type="button">↻ Actualizar</button>
+          </div>
+        </div>
+
+        <div class="tarjetas dash-kpis">
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-bag"/></svg></span><div><small>Pedidos del periodo</small><b id="k-pedidos">–</b><em id="k-pedidos-nota">Todos los estados</em></div></article>
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-money"/></svg></span><div><small>Ventas confirmadas</small><b id="k-ventas">–</b><em>Pedidos entregados</em></div></article>
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-money"/></svg></span><div><small>Ticket promedio</small><b id="k-ticket">–</b><em>Por pedido entregado</em></div></article>
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-bag"/></svg></span><div><small>Pedidos pendientes</small><b id="k-pendientes">–</b><em>Por atender ahora</em></div></article>
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-cup"/></svg></span><div><small>Productos activos</small><b id="k-productos">–</b><em>Disponibles en la tienda</em></div></article>
+          <article class="kpi"><span class="kpi-ico"><svg><use href="#i-users"/></svg></span><div><small>Clientes registrados</small><b id="k-usuarios">–</b><em>Cuentas de clientes</em></div></article>
+        </div>
+
+        <div class="dos-col dash-principal">
+          <article class="caja">
+            <div class="caja-cabecera"><div><span class="panel-eyebrow">RENDIMIENTO</span><h3 id="grafico-titulo">Ventas de los últimos 7 días</h3></div><span class="panel-tag">S/.</span></div>
+            <div id="grafico" class="grafico"></div>
+            <p class="nota-panel">Solo se consideran pedidos con estado «entregado».</p>
+          </article>
+          <article class="caja">
+            <div class="caja-cabecera"><div><span class="panel-eyebrow">ACTIVIDAD</span><h3>Pedidos recientes</h3></div><button class="link-panel" data-ir-pedidos>Ver todos →</button></div>
+            <div id="recientes"></div>
+          </article>
+        </div>
+
+        <div class="dash-secundario">
+          <article class="caja">
+            <div class="caja-cabecera"><div><span class="panel-eyebrow">OPERACIÓN</span><h3>Estado de los pedidos</h3></div></div>
+            <div id="estado-resumen" class="resumen-barras"></div>
+          </article>
+          <article class="caja">
+            <div class="caja-cabecera"><div><span class="panel-eyebrow">PREFERENCIAS</span><h3>Métodos de pago</h3></div></div>
+            <div id="pagos-resumen" class="resumen-lista"></div>
+          </article>
+          <article class="caja">
+            <div class="caja-cabecera"><div><span class="panel-eyebrow">PRODUCTOS</span><h3>Más vendidos</h3></div><button class="link-panel" data-ir-productos>Ver carta →</button></div>
+            <div id="productos-top" class="top-productos"></div>
+          </article>
+        </div>
+        <p class="dash-actualizado" id="dash-actualizado">Los datos se cargarán desde Supabase.</p>
+      </section>
+
+      <!-- PRODUCTOS -->
+      <section class="sec" id="sec-productos" hidden>
+        <div class="barra-h">
+          <label class="buscar"><svg><use href="#i-search"/></svg><input type="search" id="p-buscar" placeholder="Buscar producto…"></label>
+          <button class="btn" id="p-nuevo"><svg><use href="#i-plus"/></svg>Nuevo producto</button>
+        </div>
+        <div class="tabla-wrap"><table class="tabla" id="tabla-productos"></table></div>
+      </section>
+
+      <!-- PEDIDOS -->
+      <section class="sec" id="sec-pedidos" hidden>
+        <div class="barra-h">
+          <select id="f-estado" class="sel">
+            <option value="">Todos los estados</option><option value="pendiente">Pendiente</option>
+            <option value="preparando">Preparando</option><option value="entregado">Entregado</option><option value="cancelado">Cancelado</option>
+          </select>
+          <button class="btn sec" id="ped-recargar">Actualizar</button>
+        </div>
+        <div class="tabla-wrap"><table class="tabla" id="tabla-pedidos"></table></div>
+      </section>
+
+      <!-- USUARIOS -->
+      <section class="sec" id="sec-usuarios" hidden>
+        <div class="tabla-wrap"><table class="tabla" id="tabla-usuarios"></table></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- ============ VENTANAS ============ -->
+<div class="modal" id="m-producto" aria-hidden="true">
+  <form class="modal-caja" id="form-producto" novalidate>
+    <button type="button" class="icono oscuro cerrar" data-cerrar aria-label="Cerrar"><svg><use href="#i-x"/></svg></button>
+    <h3 id="mp-titulo">Nuevo producto</h3>
+    <label class="etq">Nombre<input type="text" id="mp-nombre" maxlength="60"></label>
+    <label class="etq">Descripción<textarea id="mp-desc" rows="2" maxlength="160"></textarea></label>
+    <div class="fila2">
+      <label class="etq">Precio (S/.)<input type="number" id="mp-precio" min="0" step="0.10"></label>
+      <label class="etq">Categoría<select id="mp-cat" class="sel"></select></label>
+    </div>
+    <div class="etq">Foto
+      <div class="foto-sel">
+        <div class="vista-foto" id="mp-vista"><svg><use href="#i-cup"/></svg></div>
+        <div><input type="file" id="mp-file" accept="image/*"><small>JPG o PNG, máx. 2 MB.</small></div>
+      </div>
+    </div>
+    <div class="checks">
+      <label class="chk"><input type="checkbox" id="mp-activo" checked> Visible en la tienda</label>
+      <label class="chk"><input type="checkbox" id="mp-nuevo"> Etiqueta «Nuevo»</label>
+    </div>
+    <p class="error" id="mp-error"></p>
+    <button class="btn bloque" type="submit">Guardar producto</button>
+  </form>
+</div>
+
+<div class="modal" id="m-pedido" aria-hidden="true">
+  <div class="modal-caja">
+    <button type="button" class="icono oscuro cerrar" data-cerrar aria-label="Cerrar"><svg><use href="#i-x"/></svg></button>
+    <div id="mped-cuerpo"></div>
+  </div>
+</div>
+
+<div class="modal" id="m-confirm" aria-hidden="true">
+  <div class="modal-caja chica">
+    <h3 id="mc-titulo">¿Seguro?</h3>
+    <p id="mc-texto" class="sub"></p>
+    <div class="fila2"><button class="btn sec" id="mc-no">Cancelar</button><button class="btn peligro" id="mc-si">Confirmar</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.80.0/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
